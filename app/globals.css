@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+
+  body {
+    @apply bg-white text-ink-900 antialiased;
+    font-feature-settings: "tnum", "cv11";
+    overflow-x: clip;
+  }
+
+  ::selection {
+    @apply bg-orange-500 text-white;
+  }
+
+  /* Default link reset. Components opt into accent color explicitly. */
+  a {
+    @apply text-inherit no-underline;
+  }
+}
+
+@layer base {
+  /* Respect motion preferences. Accessibility critical (WCAG, Apple HIG, MD). */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  /* Visible focus ring on keyboard navigation only (mouse users get nothing) */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+  :focus-visible {
+    outline: 2px solid theme("colors.orange.500");
+    outline-offset: 2px;
+    border-radius: theme("borderRadius.md");
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-container px-6 sm:px-8 md:px-12;
+  }
+  .container-narrow {
+    @apply mx-auto w-full max-w-narrow px-6 sm:px-8 md:px-12;
+  }
+
+  /* Scroll-triggered reveal: opacity + 8px translate, 300ms ease-out.
+     Fits brand bible motion budget (≤300ms, no spring).
+     SSR/no-JS default is visible. JS sets data-visible="false" only after
+     mount when the element is below the fold; the IntersectionObserver
+     then removes the attribute (or sets it to undefined) on intersect. */
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, transform;
+  }
+  .reveal[data-visible="false"] {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  /* Subtle dot-grid background pattern. Geometric, no gradient.
+     Used on hero only. Density tuned to be felt, not seen. */
+  .dot-grid {
+    background-image: radial-gradient(
+      theme("colors.ink.200") 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+    background-position: 0 0;
+  }
+
+  /* Section padding tokens. Deliberately tight so every section pulls the
+     next one into the bottom of the viewport — users scrolling through a
+     section start seeing the next section's heading or eyebrow before
+     they reach the end of the current section, which keeps them moving
+     down the page instead of bailing at section breaks.
+     Demo templates (/examples/*) use their own literal padding values
+     and aren't affected by this. */
+  .section {
+    @apply py-10 sm:py-12 md:py-14;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-[1.5px] border-transparent
+      px-7 py-3.5 text-base font-semibold transition
+      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2
+      active:scale-[0.98];
+  }
+  .btn-lg {
+    @apply px-8 py-4 text-[17px];
+  }
+  .btn-primary {
+    @apply bg-orange-500 text-white hover:bg-orange-600;
+  }
+  .btn-secondary {
+    @apply border-navy-800 bg-white text-navy-800 hover:bg-navy-100;
+  }
+  .btn-block {
+    @apply flex w-full;
+  }
+
+  /* Labels / badges */
+  .label {
+    @apply mb-3 inline-block text-label uppercase text-orange-500;
+  }
+  .badge-orange {
+    @apply mb-6 inline-block rounded-sm bg-orange-100 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.06em] text-orange-500;
+  }
+
+  /* Card */
+  .card {
+    @apply rounded-lg border border-ink-200 bg-white p-8 shadow-card transition
+      hover:border-ink-300 hover:shadow-card-hover;
+  }
+}
