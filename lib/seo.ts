@@ -11,7 +11,7 @@ export const seo = {
     `https://${site.domain}`,
 
   // Verification tokens (replace with real values once domain is connected)
-  googleVerification: "REPLACE_GOOGLE_SITE_VERIFICATION_TOKEN",
+  googleVerification: "OuRwUUbvvm0LjEf1La8B5Plxhzz3O6QW1qkyNCVt7p4",
   bingVerification: "REPLACE_BING_VERIFICATION_TOKEN",
   // IndexNow key. Public; the value of the secret is the proof the file
   // lives at /<key>.txt (handled by app/[indexnow]/route.ts).
