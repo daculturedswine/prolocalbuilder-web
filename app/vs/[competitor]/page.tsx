@@ -51,7 +51,7 @@ export default async function VsPage({ params }: Props) {
     publisher: {
       "@type": "Organization",
       name: site.name,
-      logo: { "@type": "ImageObject", url: `${seo.siteUrl}/icon` },
+      logo: { "@type": "ImageObject", url: `${seo.siteUrl}/logo.png` },
     },
     mainEntityOfPage: url,
   };

@@ -1706,7 +1706,7 @@ export function organizationSchema() {
     "@type": "Organization",
     name: site.name,
     url: seo.siteUrl,
-    logo: `${seo.siteUrl}/icon.png`,
+    logo: `${seo.siteUrl}/logo.png`,
     description: site.description,
     sameAs: [],
   };
