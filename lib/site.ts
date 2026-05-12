@@ -34,7 +34,7 @@ export const team: TeamMember[] = [
     title: "Co-founder",
     location: "Appleton, WI",
     metro: "appleton",
-    photoUrl: null,
+    photoUrl: "https://api.makko.ai/storage/v1/object/public/collection-node-images/6f1edf47-be71-4c38-9203-26202e227b0a/087e818a-9fb7-4e49-b4d3-c02ac60305ea/1778553044839_Kyle_Headshot.png",
   },
   {
     slug: "cesar",
@@ -42,7 +42,7 @@ export const team: TeamMember[] = [
     title: "Co-founder",
     location: "San Jose, CA",
     metro: "san-jose",
-    photoUrl: null,
+    photoUrl: "https://api.makko.ai/storage/v1/object/public/collection-node-images/6f1edf47-be71-4c38-9203-26202e227b0a/087e818a-9fb7-4e49-b4d3-c02ac60305ea/1778553048255_Cesar_Headshot.png",
   },
   {
     slug: "zac",
@@ -50,7 +50,7 @@ export const team: TeamMember[] = [
     title: "Co-founder",
     location: "Las Vegas, NV",
     metro: "vegas",
-    photoUrl: null,
+    photoUrl: "https://api.makko.ai/storage/v1/object/public/collection-node-images/6f1edf47-be71-4c38-9203-26202e227b0a/087e818a-9fb7-4e49-b4d3-c02ac60305ea/1778553904719_Zac_logo.png",
   },
 ];
 
@@ -62,12 +62,6 @@ export function teamMemberByMetro(
   return m;
 }
 
-/**
- * To wire in a real photo:
- *   1. Drop file at public/team/kyle.jpg (1:1 square, 1024px+ recommended)
- *   2. Set photoUrl: "/team/kyle.jpg" on that member above
- *   3. That's it. The Hero and city pages auto-render the image.
- */
 
 export type Tier = {
   id: "starter" | "professional" | "premium";

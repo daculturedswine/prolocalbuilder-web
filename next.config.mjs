@@ -16,7 +16,7 @@ const csp = [
   "default-src 'self'",
   scriptSrc,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://*.tile.openstreetmap.org https://tile.openstreetmap.org",
+  "img-src 'self' data: blob: https://*.tile.openstreetmap.org https://tile.openstreetmap.org https://api.makko.ai",
   "font-src 'self' data:",
   "connect-src 'self' ws: wss:", // ws: needed for HMR websocket in dev
   "frame-ancestors 'none'",
@@ -39,6 +39,11 @@ const nextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: false,
   poweredByHeader: false,
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "api.makko.ai" },
+    ],
+  },
   async headers() {
     return [
       {
