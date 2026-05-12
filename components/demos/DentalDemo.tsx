@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { DemoSite } from "@/lib/demos";
 
 const IMG = {
@@ -85,12 +86,14 @@ export function DentalDemo({ demo }: { demo: DemoSite }) {
             </div>
           </div>
 
-          <nav className="hidden items-center gap-9 text-[14px] font-medium md:flex" style={{ color: ink }}>
-            <a href="#services" className="hover:opacity-70">Services</a>
-            <a href="#provider" className="hover:opacity-70">Dr. Park</a>
-            <a href="#technology" className="hover:opacity-70">Technology</a>
-            <a href="#insurance" className="hover:opacity-70">Insurance</a>
-            <a href="#book" className="hover:opacity-70">Patients</a>
+          <nav className="hidden items-center gap-7 text-[13.5px] font-medium md:flex" style={{ color: ink }}>
+            <Link href={`/examples/${demo.slug}/services`} className="hover:opacity-70">Services</Link>
+            <Link href={`/examples/${demo.slug}/locations`} className="hover:opacity-70">Locations</Link>
+            <Link href={`/examples/${demo.slug}/about`} className="hover:opacity-70">About</Link>
+            <Link href={`/examples/${demo.slug}/team`} className="hover:opacity-70">Team</Link>
+            <Link href={`/examples/${demo.slug}/reviews`} className="hover:opacity-70">Reviews</Link>
+            <Link href={`/examples/${demo.slug}/new-patients`} className="hover:opacity-70">New patients</Link>
+            <Link href={`/examples/${demo.slug}/contact`} className="hover:opacity-70">Contact</Link>
           </nav>
 
           <a

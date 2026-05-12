@@ -4,6 +4,7 @@
  */
 
 import { site, tiers, faqs } from "./site";
+import { demos, pagesForDemo } from "./demos";
 
 export const seo = {
   siteUrl:
@@ -1639,6 +1640,21 @@ export type SitemapEntry = {
   changefreq: "daily" | "weekly" | "monthly" | "yearly";
 };
 
+function demoSubPages(): SitemapEntry[] {
+  const out: SitemapEntry[] = [];
+  for (const d of demos) {
+    for (const p of pagesForDemo(d)) {
+      if (p.path === "") continue; // home is already in the sitemap
+      out.push({
+        path: `/examples/${d.slug}/${p.path}`,
+        priority: 0.7,
+        changefreq: "monthly",
+      });
+    }
+  }
+  return out;
+}
+
 export function buildSitemap(): SitemapEntry[] {
   const base: SitemapEntry[] = [
     { path: "/", priority: 1.0, changefreq: "weekly" },
@@ -1646,6 +1662,7 @@ export function buildSitemap(): SitemapEntry[] {
     { path: "/examples/forest-edge-landscaping", priority: 0.8, changefreq: "monthly" },
     { path: "/examples/rivera-plumbing", priority: 0.8, changefreq: "monthly" },
     { path: "/examples/henderson-smile-dental", priority: 0.8, changefreq: "monthly" },
+    ...demoSubPages(),
     { path: "/web-design", priority: 0.85, changefreq: "monthly" },
     { path: "/websites-for", priority: 0.85, changefreq: "monthly" },
     { path: "/vs", priority: 0.7, changefreq: "monthly" },

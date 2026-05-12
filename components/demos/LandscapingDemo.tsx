@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { DemoSite } from "@/lib/demos";
 
 /**
@@ -17,30 +18,6 @@ const SERVICE_IMAGES = [
   { src: "/demos/landscaping/service-spring.png", alt: "Spring cleanup of a Wisconsin front yard" },
   { src: "/demos/landscaping/service-mulch.png", alt: "Hands spreading dark hardwood mulch around hostas" },
   { src: "/demos/landscaping/service-snow.png", alt: "Snowplow truck clearing a residential driveway" },
-];
-
-const RECENT_WORK = [
-  {
-    neighborhood: "Bluemound, Appleton",
-    scope: "Full bed refresh + mulch",
-    season: "April 2026",
-    src: "/demos/landscaping/work-bluemound.png",
-    alt: "Refreshed garden beds in Bluemound, Appleton",
-  },
-  {
-    neighborhood: "Ridge Court, Neenah",
-    scope: "Hardscape patio + plantings",
-    season: "May 2026",
-    src: "/demos/landscaping/work-ridge.png",
-    alt: "Flagstone patio with stone fire pit, Neenah",
-  },
-  {
-    neighborhood: "Maplewood, Kaukauna",
-    scope: "Spring cleanup + edging",
-    season: "April 2026",
-    src: "/demos/landscaping/work-maplewood.png",
-    alt: "Spring cleanup of a Maplewood, Kaukauna ranch home",
-  },
 ];
 
 export function LandscapingDemo({ demo }: { demo: DemoSite }) {
@@ -106,10 +83,10 @@ export function LandscapingDemo({ demo }: { demo: DemoSite }) {
           </div>
 
           <nav className="hidden items-center gap-8 text-[14px] font-medium text-ink-700 md:flex">
-            <a href="#services" className="hover:text-ink-900">Services</a>
-            <a href="#work" className="hover:text-ink-900">Recent work</a>
-            <a href="#about" className="hover:text-ink-900">About</a>
-            <a href="#contact" className="hover:text-ink-900">Contact</a>
+            <Link href={`/examples/${demo.slug}/services`} className="hover:text-ink-900">Services</Link>
+            <Link href={`/examples/${demo.slug}/about`} className="hover:text-ink-900">About</Link>
+            <Link href={`/examples/${demo.slug}/reviews`} className="hover:text-ink-900">Reviews</Link>
+            <Link href={`/examples/${demo.slug}/contact`} className="hover:text-ink-900">Contact</Link>
           </nav>
 
           <a
@@ -156,27 +133,6 @@ export function LandscapingDemo({ demo }: { demo: DemoSite }) {
                 <a href="#services" className="rounded text-[15px] font-semibold underline-offset-4 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-4" style={{ color: ink, ["--tw-ring-color" as string]: ink }}>
                   Or see what we do
                 </a>
-              </div>
-
-              <div className="mt-14 grid grid-cols-3 gap-6 max-w-[440px]">
-                <div>
-                  <div className="fe-serif text-[36px] font-semibold leading-none" style={{ color: accent }}>
-                    7+
-                  </div>
-                  <div className="mt-1 text-[12px] uppercase tracking-[0.14em] text-ink-700">years serving the valley</div>
-                </div>
-                <div>
-                  <div className="fe-serif text-[36px] font-semibold leading-none" style={{ color: accent }}>
-                    180+
-                  </div>
-                  <div className="mt-1 text-[12px] uppercase tracking-[0.14em] text-ink-700">homes mowed weekly</div>
-                </div>
-                <div>
-                  <div className="fe-serif text-[36px] font-semibold leading-none" style={{ color: accent }}>
-                    98%
-                  </div>
-                  <div className="mt-1 text-[12px] uppercase tracking-[0.14em] text-ink-700">repeat customer rate</div>
-                </div>
               </div>
             </div>
 
@@ -255,46 +211,6 @@ export function LandscapingDemo({ demo }: { demo: DemoSite }) {
               </article>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Recent work / before-after */}
-      <section id="work" style={{ background: bg }}>
-        <div className="mx-auto max-w-[1200px] px-6 py-24 sm:px-10 sm:py-28">
-          <div className="mb-14 max-w-[640px]">
-            <div className="text-[11px] uppercase tracking-[0.22em]" style={{ color: accent }}>Recent work</div>
-            <h2 className="fe-serif mt-3 text-[40px] font-semibold leading-[1.05] tracking-[-0.015em] sm:text-[52px]" style={{ color: ink }}>
-              From overgrown to <span className="italic">just right</span>.
-            </h2>
-            <p className="mt-5 text-[17px] leading-[1.65] text-ink-700">
-              A few homes we cared for this past season.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {RECENT_WORK.map((p) => (
-              <article key={p.neighborhood} className="group">
-                <div className="relative h-[300px] overflow-hidden rounded-md">
-                  <Image
-                    src={p.src}
-                    alt={p.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                  <div className="absolute inset-x-4 bottom-4 flex items-end justify-between">
-                    <div className="rounded-sm bg-white/95 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em]" style={{ color: accent }}>
-                      {p.season}
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <h3 className="fe-serif text-[20px] font-semibold" style={{ color: ink }}>{p.neighborhood}</h3>
-                  <p className="mt-1 text-[14px] text-ink-700">{p.scope}</p>
-                </div>
-              </article>
-            ))}
           </div>
         </div>
       </section>

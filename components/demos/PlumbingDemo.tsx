@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { DemoSite } from "@/lib/demos";
 
 /**
@@ -84,12 +85,12 @@ export function PlumbingDemo({ demo }: { demo: DemoSite }) {
             </div>
           </div>
 
-          <nav className="hidden items-center gap-7 text-[14px] font-medium text-ink-700 lg:flex">
-            <a href="#services" className="hover:text-ink-900">Services</a>
-            <a href="#why" className="hover:text-ink-900">Why Rivera</a>
-            <a href="#pricing" className="hover:text-ink-900">Pricing</a>
-            <a href="#service-area" className="hover:text-ink-900">Service area</a>
-            <a href="#reviews" className="hover:text-ink-900">Reviews</a>
+          <nav className="hidden items-center gap-6 text-[14px] font-medium text-ink-700 lg:flex">
+            <Link href={`/examples/${demo.slug}/services`} className="hover:text-ink-900">Services</Link>
+            <Link href={`/examples/${demo.slug}/gallery`} className="hover:text-ink-900">Gallery</Link>
+            <Link href={`/examples/${demo.slug}/about`} className="hover:text-ink-900">About</Link>
+            <Link href={`/examples/${demo.slug}/reviews`} className="hover:text-ink-900">Reviews</Link>
+            <Link href={`/examples/${demo.slug}/contact`} className="hover:text-ink-900">Contact</Link>
           </nav>
 
           <a
