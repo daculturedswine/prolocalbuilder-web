@@ -25,6 +25,18 @@ export type TeamMember = {
   metro: "appleton" | "san-jose" | "vegas";
   /** Set to "/team/<slug>.jpg" once the photo file is dropped into public/team/. */
   photoUrl: string | null;
+  /**
+   * Per-image CSS object-position value. Override when a source photo's
+   * default-center crop chops the face — e.g. for a full-body shot,
+   * "center top" anchors the head at the top of the square.
+   */
+  photoFocus?: string;
+  /**
+   * Scale factor applied to the image inside its square crop. >1 zooms
+   * in (head bigger), <1 zooms out (head smaller). Used to normalize
+   * head size across portraits with different source framing.
+   */
+  photoZoom?: number;
 };
 
 export const team: TeamMember[] = [
@@ -34,7 +46,9 @@ export const team: TeamMember[] = [
     title: "Co-founder",
     location: "Appleton, WI",
     metro: "appleton",
-    photoUrl: "https://api.makko.ai/storage/v1/object/public/collection-node-images/6f1edf47-be71-4c38-9203-26202e227b0a/087e818a-9fb7-4e49-b4d3-c02ac60305ea/1778553044839_Kyle_Headshot.png",
+    photoUrl: "https://api.makko.ai/storage/v1/object/public/collection-node-images/6f1edf47-be71-4c38-9203-26202e227b0a/087e818a-9fb7-4e49-b4d3-c02ac60305ea/1778560690568_Kyles_Headshot.png",
+    // Shift focal point down slightly so the face sits lower in the square.
+    photoFocus: "center 40%",
   },
   {
     slug: "cesar",
@@ -43,6 +57,11 @@ export const team: TeamMember[] = [
     location: "San Jose, CA",
     metro: "san-jose",
     photoUrl: "https://api.makko.ai/storage/v1/object/public/collection-node-images/6f1edf47-be71-4c38-9203-26202e227b0a/087e818a-9fb7-4e49-b4d3-c02ac60305ea/1778553048255_Cesar_Headshot.png",
+    // Full-body source — anchor at the top so the square crops to a
+    // head-and-shoulders portrait instead of legs-and-torso.
+    // Full-body source — zoom way in and anchor on the face (~25% from top).
+    photoFocus: "center 12%",
+    photoZoom: 2.03,
   },
   {
     slug: "zac",
@@ -51,6 +70,7 @@ export const team: TeamMember[] = [
     location: "Las Vegas, NV",
     metro: "vegas",
     photoUrl: "https://api.makko.ai/storage/v1/object/public/collection-node-images/6f1edf47-be71-4c38-9203-26202e227b0a/087e818a-9fb7-4e49-b4d3-c02ac60305ea/1778553904719_Zac_logo.png",
+    // Default center works — already balanced head-and-shoulders.
   },
 ];
 

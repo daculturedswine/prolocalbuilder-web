@@ -32,6 +32,11 @@ export function TeamCard({ member, variant = "card" }: Props) {
             fill
             sizes="(max-width: 768px) 100vw, 320px"
             className="object-cover"
+            style={{
+              objectPosition: member.photoFocus ?? "center",
+              transform: member.photoZoom ? `scale(${member.photoZoom})` : undefined,
+              transformOrigin: member.photoFocus ?? "center",
+            }}
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center text-center text-body-sm text-ink-500">
