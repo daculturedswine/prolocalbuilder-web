@@ -1,6 +1,6 @@
 {
   "name": "prolocalbuilder-web",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "description": "ProLocalBuilder marketing site — Next.js + TypeScript + Tailwind",
   "scripts": {
