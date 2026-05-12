@@ -22,7 +22,7 @@ export type DemoSite = {
   city: string;
   state: string;
   metro: "appleton" | "san-jose" | "vegas";
-  tier: 1 | 2 | 3;
+  tier: "starter" | "professional" | "premium";
   flatPrice: number;
   /** Fictional owner name displayed in the demo's "About" section. */
   founder: { firstName: string; lastName: string; title: string };
@@ -51,7 +51,7 @@ export const demos: DemoSite[] = [
     city: "Appleton",
     state: "WI",
     metro: "appleton",
-    tier: 3,
+    tier: "starter",
     flatPrice: 895,
     founder: {
       firstName: "Mike",
@@ -106,7 +106,7 @@ export const demos: DemoSite[] = [
     city: "San Jose",
     state: "CA",
     metro: "san-jose",
-    tier: 2,
+    tier: "professional",
     flatPrice: 1795,
     founder: {
       firstName: "Carlos",
@@ -161,7 +161,7 @@ export const demos: DemoSite[] = [
     city: "Henderson",
     state: "NV",
     metro: "vegas",
-    tier: 1,
+    tier: "premium",
     flatPrice: 2995,
     founder: {
       firstName: "Sarah",

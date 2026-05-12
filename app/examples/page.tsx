@@ -48,21 +48,17 @@ export default function ExamplesHubPage() {
           <div className="container-page">
             <ul className="grid gap-6 md:grid-cols-3">
               {demos.map((demo) => {
-                const tierMeta = tiers.find(
-                  (t) =>
-                    (demo.tier === 1 && t.id === "premium") ||
-                    (demo.tier === 2 && t.id === "professional") ||
-                    (demo.tier === 3 && t.id === "starter")
-                );
+                const tierMeta = tiers.find((t) => t.id === demo.tier);
+                const tierName = tierMeta?.name ?? demo.tier;
                 return (
                   <li key={demo.slug}>
                     <Link
                       href={`/examples/${demo.slug}`}
-                      aria-label={`View ${demo.businessName} concept site, Tier ${demo.tier}`}
+                      aria-label={`View ${demo.businessName} concept site, ${tierName} tier`}
                       className="card block h-full"
                     >
                       <div className="text-label uppercase text-orange-500">
-                        Tier {demo.tier} · ${formatPrice(demo.flatPrice)}
+                        {tierName} · ${formatPrice(demo.flatPrice)}
                       </div>
                       <h2 className="mt-2 text-h3 text-ink-900">
                         {demo.businessName}
