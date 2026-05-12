@@ -61,7 +61,7 @@ export default function HowLongDoesItTakeToBuildAWebsitePage() {
                 url: seo.siteUrl,
                 logo: {
                   "@type": "ImageObject",
-                  url: `${seo.siteUrl}/icon.png`,
+                  url: `${seo.siteUrl}/logo.png`,
                 },
               },
               mainEntityOfPage: {

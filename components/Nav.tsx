@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { site } from "@/lib/site";
 import { MobileMenu } from "./MobileMenu";
@@ -23,12 +24,15 @@ export function Nav() {
           aria-label={`${site.name} home`}
           className="flex items-center gap-2.5 font-bold tracking-tight transition-opacity duration-200 hover:opacity-80"
         >
-          <span
+          <Image
+            src="/logo.png"
+            alt=""
+            width={32}
+            height={32}
+            className="h-8 w-8"
             aria-hidden="true"
-            className="flex h-8 w-8 items-center justify-center rounded-md bg-navy-800 font-mono text-[13px] font-bold text-white"
-          >
-            PL
-          </span>
+            priority
+          />
           <span className="text-lg text-ink-900 hidden sm:inline">
             Pro<span className="text-orange-500">Local</span>Builder
           </span>
