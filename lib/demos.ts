@@ -52,7 +52,7 @@ export const demos: DemoSite[] = [
     state: "WI",
     metro: "appleton",
     tier: 3,
-    flatPrice: 750,
+    flatPrice: 895,
     founder: {
       firstName: "Mike",
       lastName: "Halverson",
@@ -107,7 +107,7 @@ export const demos: DemoSite[] = [
     state: "CA",
     metro: "san-jose",
     tier: 2,
-    flatPrice: 1500,
+    flatPrice: 1795,
     founder: {
       firstName: "Carlos",
       lastName: "Rivera",
@@ -162,7 +162,7 @@ export const demos: DemoSite[] = [
     state: "NV",
     metro: "vegas",
     tier: 1,
-    flatPrice: 2500,
+    flatPrice: 2995,
     founder: {
       firstName: "Sarah",
       lastName: "Park",

@@ -25,7 +25,7 @@ export function Hero() {
           <h1 className="text-display-sm sm:text-display-md md:text-display font-bold leading-[1.05] tracking-[-0.025em] text-ink-900">
             Websites for local
             <br className="hidden sm:block" /> businesses.{" "}
-            <span className="text-orange-500">$750 flat.</span>
+            <span className="text-orange-500">$895 flat.</span>
           </h1>
 
           <p className="mt-5 text-body-lg text-ink-700 sm:mt-6">

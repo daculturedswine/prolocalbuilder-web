@@ -11,7 +11,7 @@ const rows = [
   },
   {
     usual: "A proposal that grows every time you ask a question.",
-    ours: "Three fixed tiers: $750, $1,500, or $2,500.",
+    ours: "Three fixed tiers: $895, $1,795, or $2,995.",
   },
 ];
 

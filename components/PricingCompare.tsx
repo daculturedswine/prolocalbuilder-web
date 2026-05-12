@@ -55,20 +55,20 @@ export function PricingCompare() {
                   scope="col"
                   className="break-words px-3 py-4 text-label uppercase text-navy-800 sm:px-5"
                 >
-                  Starter <span className="font-mono normal-case">$750</span>
+                  Starter <span className="font-mono normal-case">$895</span>
                 </th>
                 <th
                   scope="col"
                   className="break-words px-3 py-4 text-label uppercase text-orange-500 sm:px-5"
                 >
                   Professional{" "}
-                  <span className="font-mono normal-case">$1,500</span>
+                  <span className="font-mono normal-case">$1,795</span>
                 </th>
                 <th
                   scope="col"
                   className="break-words px-3 py-4 text-label uppercase text-navy-800 sm:px-5"
                 >
-                  Premium <span className="font-mono normal-case">$2,500</span>
+                  Premium <span className="font-mono normal-case">$2,995</span>
                 </th>
               </tr>
             </thead>

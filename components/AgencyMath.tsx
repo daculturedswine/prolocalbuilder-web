@@ -62,7 +62,7 @@ export function AgencyMath() {
                   Our model
                 </div>
                 <div className="mt-4 font-mono text-price-lg font-bold leading-none text-navy-800">
-                  $750+
+                  $895+
                 </div>
                 <ul className="mt-5 space-y-3">
                   {ourItems.map((item) => (

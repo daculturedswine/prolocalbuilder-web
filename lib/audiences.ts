@@ -18,7 +18,7 @@ export const audienceConfigs: AudienceConfig[] = [
     path: "for-trades",
     badge: "For trades",
     h1Lead: "Websites built for the way trades actually work.",
-    h1Accent: "$750–$1,500 flat.",
+    h1Accent: "$895–$1,795 flat.",
     intro:
       "Plumbers, HVAC, electricians, roofers, painters, landscapers, cleaners — your customers find you on Google when something's broken. Your site has to load fast, show your phone number on every screen, and make calling easy.",
     whyHeading: "What makes a trades website convert",
@@ -54,7 +54,7 @@ export const audienceConfigs: AudienceConfig[] = [
     path: "for-auto",
     badge: "For auto",
     h1Lead: "Websites built for shops, body shops, and roadside.",
-    h1Accent: "$750–$1,500 flat.",
+    h1Accent: "$895–$1,795 flat.",
     intro:
       "Auto repair, body shops, tire shops, detailers, towing — customers want to know you can fix what's broken, what it costs, and when you can take their car. Your site should answer all three at a glance.",
     whyHeading: "What makes an auto website convert",
@@ -90,7 +90,7 @@ export const audienceConfigs: AudienceConfig[] = [
     path: "for-medical",
     badge: "For medical practices",
     h1Lead: "Websites built for medical, dental, and specialty care.",
-    h1Accent: "$1,500–$2,500 flat.",
+    h1Accent: "$1,795–$2,995 flat.",
     intro:
       "Dentists, orthodontists, chiropractors, optometrists, vets, dermatologists, physical therapy. Patients evaluate practices online before picking up the phone. Your site has to look credible, list insurance, and let people book in two clicks.",
     whyHeading: "What makes a medical website convert",
@@ -126,7 +126,7 @@ export const audienceConfigs: AudienceConfig[] = [
     path: "for-professional-services",
     badge: "For professional services",
     h1Lead: "Websites built for lawyers, CPAs, advisors, agents.",
-    h1Accent: "$1,500–$2,500 flat.",
+    h1Accent: "$1,795–$2,995 flat.",
     intro:
       "Lawyers, accountants, insurance, financial advisors, mortgage, realtors. The first impression is the website. It has to look professional without looking generic, and it has to convert traffic into discovery calls.",
     whyHeading: "What makes a professional-services website convert",
@@ -162,7 +162,7 @@ export const audienceConfigs: AudienceConfig[] = [
     path: "for-personal-services",
     badge: "For personal services",
     h1Lead: "Websites built for salons, gyms, studios, photographers.",
-    h1Accent: "$750–$2,500 flat.",
+    h1Accent: "$895–$2,995 flat.",
     intro:
       "Salons, barbershops, nail salons, gyms, yoga, photographers, tattoo, pet groomers, daycares, med spas. Booking happens on the phone or online. Your site decides which. Make booking one tap and watch your no-show rate drop.",
     whyHeading: "What makes a personal-services website convert",
@@ -198,7 +198,7 @@ export const audienceConfigs: AudienceConfig[] = [
     path: "for-restaurants",
     badge: "For restaurants & food",
     h1Lead: "Websites built for restaurants, bakeries, food trucks.",
-    h1Accent: "$750–$2,500 flat.",
+    h1Accent: "$895–$2,995 flat.",
     intro:
       "Restaurants, bakeries, coffee shops, food trucks, florists, wedding venues, funeral homes. Your customers want a clean menu, hours that match Google, and a way to book or order in two taps. Most food-business websites fail on all three.",
     whyHeading: "What makes a food / event website convert",

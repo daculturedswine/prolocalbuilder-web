@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 export const runtime = "edge";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = `${site.name}. Websites for local businesses, $750 flat`;
+export const alt = `${site.name}. Websites for local businesses, $895 flat`;
 
 export default async function OG() {
   return new ImageResponse(
@@ -101,7 +101,7 @@ export default async function OG() {
               marginTop: 8,
             }}
           >
-            $750 flat.
+            $895 flat.
           </div>
         </div>
 

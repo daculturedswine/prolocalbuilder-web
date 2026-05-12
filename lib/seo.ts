@@ -1560,7 +1560,7 @@ export const competitors: CompetitorSEO[] = [
     slug: "wix",
     name: "Wix",
     annualCost: "$216–$564/yr",
-    ourAnnualCost: "$750 once, no monthly",
+    ourAnnualCost: "$895 once, no monthly",
     pros: [
       "Drag-and-drop editor anyone can use",
       "Lots of templates to start from",
@@ -1577,7 +1577,7 @@ export const competitors: CompetitorSEO[] = [
     slug: "squarespace",
     name: "Squarespace",
     annualCost: "$192–$648/yr",
-    ourAnnualCost: "$750 once, no monthly",
+    ourAnnualCost: "$895 once, no monthly",
     pros: [
       "Templates look better out of the box than Wix",
       "Built-in scheduling and email tools",
@@ -1594,7 +1594,7 @@ export const competitors: CompetitorSEO[] = [
     slug: "godaddy-website-builder",
     name: "GoDaddy",
     annualCost: "$120–$360/yr",
-    ourAnnualCost: "$750 once, no monthly",
+    ourAnnualCost: "$895 once, no monthly",
     pros: [
       "Cheapest of the big builders",
       "Domain + email + site bundled",
@@ -1610,7 +1610,7 @@ export const competitors: CompetitorSEO[] = [
     slug: "wordpress",
     name: "WordPress",
     annualCost: "$300–$1,500/yr (with hosting + plugins)",
-    ourAnnualCost: "$750 once, no monthly",
+    ourAnnualCost: "$895 once, no monthly",
     pros: [
       "Full control if you (or your developer) know what you're doing",
       "Massive plugin ecosystem",
@@ -1745,7 +1745,7 @@ export function localBusinessSchema() {
     image: `${seo.siteUrl}/opengraph-image`,
     telephone: site.contact.phoneHref.replace("tel:", ""),
     email: site.contact.email,
-    priceRange: "$750 - $2,500",
+    priceRange: "$895 - $2,995",
     areaServed: [
       {
         "@type": "City",

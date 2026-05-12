@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCity(slug);
   if (!city) return {};
   const url = `/web-design/${slug}`;
-  const title = `Website design in ${city.name}, ${city.state} · $750 flat`;
+  const title = `Website design in ${city.name}, ${city.state} · $895 flat`;
   const description = `Affordable website design for local businesses in ${city.name}, ${city.state}. ${tiers[0].flatPrice}–${formatPrice(tiers[2].flatPrice)} flat. Done in a week. No monthly fees.`;
   return {
     title,
@@ -132,7 +132,7 @@ export default async function CityPage({ params }: Props) {
                 </span>
                 <h1 className="text-display-sm sm:text-display-md md:text-display font-bold leading-[1.05] tracking-[-0.025em] text-ink-900">
                   Website design in {city.name}, {city.state}.{" "}
-                  <span className="text-orange-500">$750 flat.</span>
+                  <span className="text-orange-500">$895 flat.</span>
                 </h1>
                 <p className="mt-5 text-body-lg text-ink-700 max-w-[600px]">
                   We build websites for local businesses in {city.name} and

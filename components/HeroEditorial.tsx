@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 import { TeamCard } from "./TeamCard";
 
 const proof = [
-  { value: "$750", label: "starter sites" },
+  { value: "$895", label: "starter sites" },
   { value: "3", label: "metros, 3 founders" },
   { value: "10 days", label: "for a professional build" },
 ];

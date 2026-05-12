@@ -4,9 +4,9 @@
 export const site = {
   name: "ProLocalBuilder",
   domain: "prolocalbuilder.com",
-  tagline: "Websites for local businesses. $750 flat",
+  tagline: "Websites for local businesses. $895 flat",
   description:
-    "Affordable website design for local businesses. One-time flat fee from $750 — no monthly payments, no contracts. Done in a week. Serving Wisconsin, the Bay Area, and Las Vegas.",
+    "Affordable website design for local businesses. One-time flat fee from $895 — no monthly payments, no contracts. Done in a week. Serving Wisconsin, the Bay Area, and Las Vegas.",
   contact: {
     phone: "(408) 634-0404",
     phoneHref: "tel:+14086340404",
@@ -85,7 +85,7 @@ export const tiers: Tier[] = [
   {
     id: "starter",
     name: "Starter",
-    flatPrice: 750,
+    flatPrice: 895,
     monthlyPrice: 69,
     monthlyTerm: 12,
     blurb: "flat fee · one-time",
@@ -103,7 +103,7 @@ export const tiers: Tier[] = [
   {
     id: "professional",
     name: "Professional",
-    flatPrice: 1500,
+    flatPrice: 1795,
     monthlyPrice: 139,
     monthlyTerm: 12,
     blurb: "flat fee · one-time",
@@ -124,7 +124,7 @@ export const tiers: Tier[] = [
   {
     id: "premium",
     name: "Premium",
-    flatPrice: 2500,
+    flatPrice: 2995,
     monthlyPrice: 229,
     monthlyTerm: 12,
     blurb: "flat fee · one-time",

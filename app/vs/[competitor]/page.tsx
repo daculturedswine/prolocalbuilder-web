@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!c) return {};
   const url = `/vs/${slug}`;
   const title = `${site.name} vs ${c.name} · Honest comparison`;
-  const description = `${site.name} vs ${c.name}: pricing, control, ownership, SEO. We charge $750 once. ${c.name} charges ${c.annualCost}.`;
+  const description = `${site.name} vs ${c.name}: pricing, control, ownership, SEO. We charge $895 once. ${c.name} charges ${c.annualCost}.`;
   return {
     title,
     description,
