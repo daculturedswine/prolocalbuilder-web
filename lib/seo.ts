@@ -15,7 +15,7 @@ export const seo = {
   bingVerification: "REPLACE_BING_VERIFICATION_TOKEN",
   // IndexNow key. Public; the value of the secret is the proof the file
   // lives at /<key>.txt (handled by app/[indexnow]/route.ts).
-  indexNowKey: "REPLACE_INDEXNOW_KEY_32CHARS",
+  indexNowKey: "05bacf1eb0cf417586db88e502272dac",
 } as const;
 
 /* ---------------------------------------------------------------------- */
