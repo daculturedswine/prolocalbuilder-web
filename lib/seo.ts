@@ -12,7 +12,7 @@ export const seo = {
 
   // Verification tokens (replace with real values once domain is connected)
   googleVerification: "OuRwUUbvvm0LjEf1La8B5Plxhzz3O6QW1qkyNCVt7p4",
-  bingVerification: "REPLACE_BING_VERIFICATION_TOKEN",
+  bingVerification: "2C953A1E468C0DF3AC66B7332B4FFCA6",
   // IndexNow key. Public; the value of the secret is the proof the file
   // lives at /<key>.txt (handled by app/[indexnow]/route.ts).
   indexNowKey: "05bacf1eb0cf417586db88e502272dac",
@@ -1649,6 +1649,13 @@ export function buildSitemap(): SitemapEntry[] {
     { path: "/web-design", priority: 0.85, changefreq: "monthly" },
     { path: "/websites-for", priority: 0.85, changefreq: "monthly" },
     { path: "/vs", priority: 0.7, changefreq: "monthly" },
+    { path: "/pricing", priority: 0.9, changefreq: "monthly" },
+    { path: "/flat-fee-website-design", priority: 0.85, changefreq: "monthly" },
+    { path: "/no-monthly-fees", priority: 0.85, changefreq: "monthly" },
+    { path: "/one-time-payment-website", priority: 0.85, changefreq: "monthly" },
+    { path: "/blog", priority: 0.8, changefreq: "weekly" },
+    { path: "/blog/how-much-does-a-website-cost", priority: 0.85, changefreq: "monthly" },
+    { path: "/blog/how-long-does-it-take-to-build-a-website", priority: 0.85, changefreq: "monthly" },
     { path: "/privacy", priority: 0.3, changefreq: "yearly" },
     { path: "/terms", priority: 0.3, changefreq: "yearly" },
     { path: "/for-trades", priority: 0.85, changefreq: "monthly" },
