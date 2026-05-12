@@ -7,6 +7,13 @@ export const contentType = "image/png";
 export const alt = `${site.name}. Websites for local businesses, $895 flat`;
 
 export default async function OG() {
+  const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : `https://${site.domain}`;
+  const logoData = await fetch(`${baseUrl}/logo.png`).then((r) =>
+    r.arrayBuffer()
+  );
+
   return new ImageResponse(
     (
       <div
@@ -22,24 +29,8 @@ export default async function OG() {
       >
         {/* Logo strip */}
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: 56,
-              height: 56,
-              background: "#1E3A5F",
-              color: "white",
-              fontSize: 22,
-              fontWeight: 700,
-              letterSpacing: "-0.04em",
-              fontFamily: "monospace",
-              borderRadius: 10,
-            }}
-          >
-            PL
-          </div>
+          {/* @ts-ignore */}
+          <img src={logoData} width={56} height={56} style={{ objectFit: "contain" }} />
           <div
             style={{
               fontSize: 28,
