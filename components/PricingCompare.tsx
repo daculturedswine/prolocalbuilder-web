@@ -6,22 +6,34 @@ type Row = {
 };
 
 const rows: Row[] = [
-  { label: "Pages", values: ["5", "10", "15+"] },
-  { label: "Mobile responsive", values: ["✓", "✓", "✓"] },
-  { label: "Contact form", values: ["✓", "✓", "✓"] },
-  { label: "Click-to-call", values: ["✓", "✓", "✓"] },
-  { label: "Booking form", values: ["—", "✓", "✓"] },
-  { label: "Click-to-text", values: ["—", "✓", "✓"] },
-  { label: "Photo gallery", values: ["—", "✓", "✓"] },
-  { label: "Service-area pages", values: ["—", "—", "✓"] },
-  { label: "Local SEO setup", values: ["—", "✓", "Advanced"] },
+  { label: "Number of pages", values: ["5", "10", "15"] },
+  { label: "Short message form", values: ["✓", "✓", "✓"] },
+  { label: "Tap-to-call button", values: ["✓", "✓", "✓"] },
+  { label: "Tap-to-text button", values: ["—", "✓", "✓"] },
+  { label: "Booking form", values: ["—", "✓", "With date + time"] },
+  { label: "Photo gallery of your work", values: ["—", "✓", "✓"] },
   {
-    label: "Post-launch edits included",
-    values: ["—", "—", "3 hours"],
+    label: "A separate page for each service you offer",
+    values: ["—", "✓", "✓"],
   },
-  { label: "Hosting included", values: ["1 year", "1 year", "1 year"] },
   {
-    label: "Timeline",
+    label: "A page for each city / neighborhood you serve",
+    values: ["—", "—", "✓"],
+  },
+  {
+    label: "Show up for “near me” searches",
+    values: ["—", "Basic setup", "Full setup"],
+  },
+  {
+    label: "Free edits after launch",
+    values: ["—", "—", "3 hours, first year"],
+  },
+  {
+    label: "We keep your site online",
+    values: ["1 year", "1 year", "1 year"],
+  },
+  {
+    label: "How fast it's done",
     values: ["5–7 days", "7–10 days", "10–14 days"],
   },
 ];

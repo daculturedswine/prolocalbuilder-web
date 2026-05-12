@@ -15,6 +15,10 @@ export function Pricing() {
             Pick the tier that fits your business. Pay once, own the site.
             Optional $25/mo if you want us to host and handle small updates.
           </p>
+          <p className="mt-3 text-body-sm text-ink-700">
+            Every site works perfectly on phones. That's the baseline — not a
+            feature we charge extra for.
+          </p>
         </div>
 
         <div className="grid items-stretch gap-6 md:grid-cols-3">
