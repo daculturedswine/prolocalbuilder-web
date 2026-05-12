@@ -27,7 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const title = `${site.name} · ${site.tagline}`;
+const title = `${site.name} · Affordable Website Design for Local Businesses · $750 Flat Fee`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(seo.siteUrl),
@@ -37,19 +37,28 @@ export const metadata: Metadata = {
   },
   description: site.description,
   keywords: [
-    "local business website",
+    "small business website design",
     "affordable website design",
-    "small business website",
+    "local business website design",
+    "web design for small business",
+    "flat fee website design",
+    "one time payment website design",
+    "website without monthly fee",
+    "no monthly fee web design",
+    "website design packages",
+    "$750 website",
+    "website done in a week",
     "Appleton WI web designer",
     "San Jose web designer",
     "Bay Area web design",
-    "HVAC website",
-    "dentist website",
-    "lawyer website",
-    "contractor website",
-    "$750 website",
-    "flat fee web design",
-    "no monthly website",
+    "Las Vegas web design",
+    "HVAC website design",
+    "plumber website design",
+    "dentist website design",
+    "lawyer website design",
+    "contractor website design",
+    "restaurant website design",
+    "landscaper website design",
     "Wix alternative",
     "Squarespace alternative",
     "WordPress alternative",

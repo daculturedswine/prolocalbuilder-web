@@ -6,7 +6,7 @@ export const site = {
   domain: "prolocalbuilder.com",
   tagline: "Websites for local businesses. $750 flat",
   description:
-    "We build websites for local businesses in Wisconsin, the San Francisco Bay Area, and Las Vegas. $750 flat. Done in a week. No monthly fees.",
+    "Affordable website design for local businesses. One-time flat fee from $750 — no monthly payments, no contracts. Done in a week. Serving Wisconsin, the Bay Area, and Las Vegas.",
   contact: {
     phone: "(920) 555-0123",
     phoneHref: "tel:+19200000000",
