@@ -15,8 +15,6 @@ function describeAction(action: Action): string {
       return `${action.player} played event ${action.cardInstanceId}`;
     case "GiveDon":
       return `${action.player} gave DON to ${action.targetInstanceId}`;
-    case "AttachDonToLeader":
-      return `${action.player} attached DON to leader`;
     case "DeclareAttack":
       return `${action.player} attacked${action.targetInstanceId ? ` ${action.targetInstanceId}` : " (leader)"}`;
     case "DeclareBlocker":

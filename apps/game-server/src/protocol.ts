@@ -28,7 +28,6 @@ export const SubmitActionSchema = z.object({
     z.object({ type: z.literal("PlayStage"), player: PlayerSlotSchema, cardInstanceId: z.string(), donToRest: z.array(z.string()) }),
     z.object({ type: z.literal("PlayEvent"), player: PlayerSlotSchema, cardInstanceId: z.string(), donToRest: z.array(z.string()) }),
     z.object({ type: z.literal("GiveDon"), player: PlayerSlotSchema, donInstanceId: z.string(), targetInstanceId: z.string() }),
-    z.object({ type: z.literal("AttachDonToLeader"), player: PlayerSlotSchema, donInstanceId: z.string() }),
     z.object({ type: z.literal("DeclareAttack"), player: PlayerSlotSchema, attackerInstanceId: z.string(), targetInstanceId: z.string().nullable() }),
     z.object({ type: z.literal("DeclareBlocker"), player: PlayerSlotSchema, blockerInstanceId: z.string() }),
     z.object({ type: z.literal("PassBlock"), player: PlayerSlotSchema }),

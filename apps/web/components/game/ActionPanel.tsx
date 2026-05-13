@@ -137,9 +137,10 @@ export function ActionPanel({
           variant="secondary"
           onClick={() =>
             onAction({
-              type: "AttachDonToLeader",
+              type: "GiveDon",
               player: mySlot,
               donInstanceId: selectedDonIds[0],
+              targetInstanceId: myState.leader.instanceId,
             })
           }
         >
