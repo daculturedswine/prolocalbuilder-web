@@ -7,7 +7,7 @@ Developer guide for AI agents working in this monorepo.
 ```
 prolocalbuilder/
 ├── apps/
-│   ├── web/            Next.js 15 marketing site (@prolocalbuilder/web)
+│   ├── web/            Next.js 15 marketing site (@optcg/web)
 │   └── game-server/    (future) WebSocket game server — sole writer of live match state
 ├── packages/
 │   ├── engine/         (@optcg/engine) All game logic lives here, nowhere else
@@ -45,7 +45,7 @@ pnpm dev:web            # run apps/web on port 3000
 pnpm build:web          # production build of apps/web
 pnpm -r typecheck       # typecheck all packages
 pnpm -r lint            # lint all packages
-pnpm --filter @prolocalbuilder/web <script>   # target apps/web specifically
+pnpm --filter @optcg/web <script>   # target apps/web specifically
 pnpm --filter @optcg/engine <script>          # target packages/engine specifically
 ```
 

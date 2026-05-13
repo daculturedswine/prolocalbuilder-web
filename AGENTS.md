@@ -42,7 +42,7 @@ pnpm -r typecheck                              # typecheck all packages
 ## Adding a new workspace package
 
 1. Create `apps/<name>/` or `packages/<name>/`.
-2. Add `package.json` with a scoped name (`@prolocalbuilder/<name>` or `@optcg/<name>`).
+2. Add `package.json` with a scoped name (`@optcg/<name>`).
 3. Add `tsconfig.json` extending `../../tsconfig.json`.
 4. Add a `src/index.ts` entry point.
 5. If other packages import it, add the path alias to root `tsconfig.json` **and** to
