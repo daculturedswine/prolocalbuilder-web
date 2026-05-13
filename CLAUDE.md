@@ -42,11 +42,15 @@ This repo uses **pnpm workspaces**. Always use `pnpm`, never `npm` or `yarn`.
 ```bash
 pnpm install            # install all workspace deps
 pnpm dev:web            # run apps/web on port 3000
+pnpm dev:server         # run apps/game-server on port 4000
 pnpm build:web          # production build of apps/web
+pnpm build:server       # compile apps/game-server to dist/
+pnpm test               # run all tests (engine + game-server)
 pnpm -r typecheck       # typecheck all packages
 pnpm -r lint            # lint all packages
-pnpm --filter @optcg/web <script>   # target apps/web specifically
-pnpm --filter @optcg/engine <script>          # target packages/engine specifically
+pnpm --filter @optcg/web <script>            # target apps/web
+pnpm --filter @optcg/engine <script>         # target packages/engine
+pnpm --filter @optcg/game-server <script>    # target apps/game-server
 ```
 
 ## TypeScript path aliases
@@ -69,3 +73,22 @@ The root `tsconfig.json` declares:
 - Tailwind brand tokens are defined in `apps/web/tailwind.config.ts` — never use arbitrary values.
 - CSP is strict in production; if you add a new external resource you must update
   `apps/web/next.config.mjs`.
+
+## Working in apps/game-server
+
+- Fastify HTTP server on port 4000 with WebSocket upgrade on `/ws`.
+- Run the dev server: `pnpm dev:server`.
+- Uses `@optcg/engine` for all game state mutations — the server is a thin transport layer.
+- All client↔server messages validated with zod schemas in `src/protocol.ts`.
+- Phase 0: in-memory state only, no Supabase. Auth stub assigns UUID per connection.
+- Tests use an ephemeral-port harness with raw `ws` clients.
+
+## Git remotes
+
+| Remote | URL | Purpose |
+|---|---|---|
+| `origin` | `github.com/daculturedswine/prolocalbuilder-web` | Main remote |
+| `external-engine` | `Desktop/optcg-sim` (local path) | Source repo for `@optcg/engine`, `@optcg/shared-types`, `@optcg/cards` |
+
+To import engine updates: `git fetch external-engine && git checkout external-engine/master -- packages/<pkg>/src/`.
+**Never copy files from outside the repo via filesystem** — always use git to bring in code from other branches or remotes.
