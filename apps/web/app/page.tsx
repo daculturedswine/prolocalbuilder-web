@@ -1,35 +1,18 @@
-import { Nav } from "@/components/Nav";
-import { HeroEditorial } from "@/components/HeroEditorial";
-import { BuildForCalls } from "@/components/BuildForCalls";
-import { Pricing } from "@/components/Pricing";
-import { PricingCompare } from "@/components/PricingCompare";
-import { AgencyMath } from "@/components/AgencyMath";
-import { ProcessTimeline } from "@/components/ProcessTimeline";
-import { ServiceAreaSection } from "@/components/ServiceAreaSection";
-import { FAQ } from "@/components/FAQ";
-import { CTA } from "@/components/CTA";
-import { Footer } from "@/components/Footer";
-import { MobilePhoneBar } from "@/components/MobilePhoneBar";
-import { NoFakeProof } from "@/components/NoFakeProof";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <>
-      <Nav />
-      <main id="main" className="overflow-x-clip pb-16 sm:pb-0">
-        <HeroEditorial />
-        <BuildForCalls />
-        <AgencyMath />
-        <Pricing />
-        <PricingCompare />
-        <ProcessTimeline />
-        <ServiceAreaSection />
-        <NoFakeProof />
-        <FAQ />
-        <CTA />
-      </main>
-      <Footer />
-      <MobilePhoneBar />
-    </>
+    <div className="min-h-screen flex items-center justify-center bg-ink-50">
+      <div className="text-center space-y-6">
+        <h1 className="text-4xl font-bold text-navy-800">OPTCG Simulator</h1>
+        <p className="text-ink-500">Play One Piece TCG matches in your browser</p>
+        <Link
+          href="/play"
+          className="inline-block rounded-lg bg-orange-600 px-8 py-3 text-lg font-semibold text-white hover:bg-orange-700 transition-colors"
+        >
+          Play
+        </Link>
+      </div>
+    </div>
   );
 }
