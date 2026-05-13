@@ -2,22 +2,19 @@
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": false,
-    "skipLibCheck": true,
     "strict": true,
-    "noEmit": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [{ "name": "next" }],
     "paths": {
-      "@/*": ["./*"]
+      "@optcg/engine": ["./packages/engine/src/index.ts"],
+      "@optcg/engine/*": ["./packages/engine/src/*"],
+      "@optcg/cards": ["./packages/cards/src/index.ts"],
+      "@optcg/cards/*": ["./packages/cards/src/*"],
+      "@optcg/shared-types": ["./packages/shared-types/src/index.ts"],
+      "@optcg/shared-types/*": ["./packages/shared-types/src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "files": []
 }
